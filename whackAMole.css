@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  justify-self: center;
+
+  width: fit-content;
+  height: fit-content;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px red solid;
+}
+.moles {
+  width: 640px;
+  height: 420px;
+  border: solid black 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: solid black 1px;
+}
+.holes {
+  width: 200px;
+  height: 200px;
+  border: solid 1px green;
+}
+
+.mole {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: top 0.3s;
+  z-index: 2;
+  object-fit: contain;
+}
+.hole {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  object-fit: contain;
+}
