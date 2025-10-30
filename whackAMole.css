@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: rgb(189, 249, 189);
+}
 .container {
   justify-self: center;
-
   width: fit-content;
   height: fit-content;
   gap: 20px;
@@ -13,36 +15,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px red solid;
 }
 .moles {
-  width: 640px;
-  height: 420px;
-  border: solid black 1px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  border: solid black 1px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  gap: 12px;
 }
 .holes {
   width: 200px;
   height: 200px;
-  border: solid 1px green;
+  border: solid 1px rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
 }
 
 .mole {
   width: 200px;
   height: 200px;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: relative;
   transition: top 0.3s;
-  z-index: 2;
   object-fit: contain;
+  top: 100%;
 }
 .hole {
   width: 200px;
-  height: 200px;
-  position: absolute;
+  height: 80px;
   object-fit: contain;
+  /* z-index: 99; */
+  position: absolute;
+  bottom: -20px;
+}
+
+button {
+  width: 100px;
+  height: 45px;
+  background-color: rgb(122, 122, 241);
+  color: white;
+  border-radius: 25px;
 }
